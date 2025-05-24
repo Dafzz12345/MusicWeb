@@ -15,7 +15,6 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      text-align: center;
     }
 
     .player {
@@ -25,7 +24,6 @@
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
       text-align: center;
       max-width: 400px;
-      margin: 20px;
     }
 
     .cover {
@@ -49,22 +47,6 @@
     audio {
       width: 100%;
       outline: none;
-      margin-bottom: 20px;
-    }
-
-    #playButton {
-      background: #1DB954;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    #playButton:hover {
-      background: #1ed760;
     }
 
     footer {
@@ -76,43 +58,17 @@
 </head>
 <body>
   <div class="player">
-    <img src="https://img1.pixhost.to/images/5937/602680821_dafa.jpg" alt="Music Album Cover" class="cover">
+    <img src="https://files.catbox.moe/4254kw.jpg" alt="Music Album Cover" class="cover">
     <h1>Sampai Jumpa</h1>
-    <p>Sampai Jumpa Temanku...</p>
-    
-    <!-- Versi 1: Audio dengan kontrol standar -->
-    <audio id="audioPlayer" controls>
-      <source src="https://f.uguu.se/BZPxCQuO" type="audio/mp3">
-      Browser Anda tidak mendukung elemen audio.
+    <p>...</p>
+    <audio controls autoplay loop>
+      <source src="https://files.catbox.moe/mh2ozk.mp4" type="audio/mp3">
+      Your browser does not support the audio element.
     </audio>
-    
-    <!-- Versi 2: Tombol play manual (uncomment untuk menggunakan) -->
-    <!--
-    <button id="playButton">Putar Lagu</button>
-    <audio id="audioPlayer" loop>
-      <source src="https://i.supa.codes/NJ0KUw" type="audio/mp3">
-    </audio>
-    -->
   </div>
 
   <footer>
     &copy; 2025 Web Create By Dafa❤️
   </footer>
-
-  <script>
-    // Solusi 1: Memungkinkan autoplay setelah interaksi pengguna
-    document.addEventListener('click', function() {
-      const audio = document.getElementById('audioPlayer');
-      audio.play().catch(e => console.log("Autoplay diblokir:", e));
-    }, { once: true });
-
-    // Solusi 2: Untuk tombol play manual (uncomment jika menggunakan versi tombol)
-    /*
-    document.getElementById('playButton').addEventListener('click', function() {
-      const audio = document.getElementById('audioPlayer');
-      audio.play();
-    });
-    */
-  </script>
 </body>
 </html>
